@@ -1,0 +1,53 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.title {
+				margin-bottom: 0.5em;
+				padding: 0.5em 0;
+				text-align: center;
+				line-height: 1;
+			}
+			.title h1 {
+				margin: 0 0 0.5em 0;
+			}
+		</style>
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<Image src="/banner.png" alt="CSS Image."  width="720" height="360"/>
+		<!DOCTYPE html>
+			<h1 class="title">Wprowadzenie do CSS</h1>
+
+			<h4>Co to jest CSS</h4>
+			<p>
+				CSS, czyli Cascading Style Sheets (Kaskadowe Arkusze Stylów), to język używany do opisywania prezentacji dokumentu napisanego w języku znaczników, jak HTML. CSS określa, jak elementy strony internetowej są wyświetlane na ekranie, w druku, lub w innych mediach. Umożliwia oddzielenie treści strony (HTML) od jej prezentacji (stylów), co ułatwia zarządzanie wyglądem i zapewnia większą elastyczność.
+			</p>
+
+			<h4>Jak działa CSS</h4>
+			<p>
+				CSS opiera się na kilku kluczowych koncepcjach:
+			</p>
+			<ul>
+				<li><strong>Selektory</strong>: To fragmenty kodu, które identyfikują elementy HTML na stronie, do których mają być zastosowane określone style. Na przykład, selektor <code>p</code> dotyczy wszystkich paragrafów na stronie.</li>
+				<li><strong>Właściwości</strong>: Po wybraniu elementu za pomocą selektora, możemy określić różne właściwości, takie jak kolor, rozmiar czcionki, marginesy itp. Na przykład, <code>color: red;</code> zmienia kolor tekstu na czerwony.</li>
+				<li><strong>Wartości</strong>: Są to konkretne ustawienia wybrane dla właściwości. W powyższym przykładzie, <code>red</code> jest wartością właściwości <code>color</code>.</li>
+				<li><strong>Deklaracja</strong>: To połączenie właściwości i wartości, zwykle umieszczone w nawiasach klamrowych. Na przykład, <code>p &#123; color: red; &#125;</code> to deklaracja mówiąca, że wszystkie paragrafy będą miały czerwony kolor tekstu.</li>
+			</ul>
+			<p>
+				CSS pozwala na tworzenie bogatych i elastycznych layoutów stron internetowych, a jego efektywne wykorzystanie jest kluczowe w nowoczesnym web designie. Dzięki niemu strony mogą być bardziej interaktywne, estetyczne i dostosowane do różnych urządzeń i rozmiarów ekranów.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
